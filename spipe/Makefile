@@ -87,3 +87,8 @@ CFLAGS	+=	-g
 #CFLAGS	+=	-pg
 
 .include <bsd.prog.mk>
+
+# The unused function warning is triggered by the use of
+# ELASTICARRAYDECL() in libcperciva/datastruct/ptrheap.c;
+# ptrlist_resize() is never used.
+CFLAGS +=	-Wno-unused-function
