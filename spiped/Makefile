@@ -3,7 +3,7 @@ PROG	=	spiped
 MAN1	=	${PROG}.1
 
 # Libraries which are sometimes merged into libc
-LDADD	=	-lrt
+#LDADD	=	-lrt    # Missing on OS X
 #LDADD	+=	-lxnet	# Missing on FreeBSD
 
 # Library code required
