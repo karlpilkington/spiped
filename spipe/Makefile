@@ -86,6 +86,8 @@ CFLAGS	+=	-g
 #CFLAGS	+=	-DDEBUG
 #CFLAGS	+=	-pg
 
+CFLAGS += ${CFLAGS_POSIX}
+
 .include <bsd.prog.mk>
 
 # The unused function warning is triggered by the use of
