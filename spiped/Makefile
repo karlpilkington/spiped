@@ -100,3 +100,6 @@ CFLAGS	+=	-g
 # ELASTICARRAYDECL() in libcperciva/datastruct/ptrheap.c;
 # ptrlist_resize() is never used.
 CFLAGS +=	-Wno-unused-function
+# Turn off warnings for system headers to avoid warning about
+# redefinition of va_list typedef in /usr/include/sys/_types/_va_list.h.
+CFLAGS +=	-Wno-system-headers
