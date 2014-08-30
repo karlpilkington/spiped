@@ -105,3 +105,7 @@ CFLAGS +=	-Wno-unused-function
 # Turn off warnings for system headers to avoid warning about
 # redefinition of va_list typedef in /usr/include/sys/_types/_va_list.h.
 CFLAGS +=	-Wno-system-headers
+# The deprecation warning is triggered by the use of
+# AES_set_encrypt_key (deprecated in OS X 10.7) in
+# libcperciva/crypto/crypto_aes.c.
+CFLAGS +=	-Wno-deprecated-declarations
